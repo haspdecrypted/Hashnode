@@ -1,0 +1,13 @@
+Resources:
+    DynamoDBUsersTable:
+      Type: 'AWS::DynamoDB::Table'
+      Description: testtable101
+      Properties:
+        TableName: test-success
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
